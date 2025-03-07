@@ -1,0 +1,300 @@
+/* top level
+--------------------------------------------*/
+.menu
+{
+    margin-right:5%; 
+    margin-top:2%;
+    width: auto;
+    float:right;
+    position:relative;
+    z-index: 4;
+    height:70px;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style:none;
+    padding: 0;
+}
+
+.menu div {
+    box-sizing:content-box;
+}
+
+.menu li
+{
+    float:left;
+    height: 34px;
+    position: relative;/*delete it if you want submenu to be positioned relative to the whole menu instead of this li element*/
+    z-index:5;
+    
+    border-left:1px solid;
+    border-right:1px solid;
+    border-top:2px solid;
+    border-color:transparent;
+    border-color:#FFF;/*IE6 Hack*/
+}
+
+.menu li:hover, .menu li.onhover
+{
+    border-color:#DDD;
+    border-top:2px solid blue;
+    border-bottom:1px solid blue;
+}
+.menu a
+{
+    padding: 0 30px;
+    line-height: 34px; /*Note: keep this value the same as the height of .menuTemplate2 li */
+    font-size: 15 px;
+    font-weight:normal;
+    display:inline-block;
+    text-decoration:none;
+    color: #000;
+    position: relative;
+}
+
+
+.menu li:hover a, .menu li.onhover a
+{
+    background-color: #EEE;
+    color: #00ADEF;
+    z-index: 9; 
+}
+
+
+
+ 
+    
+        
+/*for the top-level separators*/
+.menu li.separator
+{
+    display:none;
+}
+               
+        
+/* sub level
+--------------------------------------------*/
+        
+.menu .drop
+{
+    position: absolute;
+    z-index:5;
+    left: -9999px;
+    border: 1px solid blue;
+    border-bottom:2px solid blue;
+    background: #FFF url(bg_grad.gif) repeat-x 0 0;
+    line-height:24px;
+    text-align:right;
+    padding: 10px;  
+    top:31px;
+}
+
+.menu .drop a
+{
+    padding-left: 0px;
+    padding-right:0px;
+    font-size: 12px;
+    font-weight: normal;
+    text-align:left;
+    position: static;
+    z-index: 0;
+}
+
+.menu li:hover .drop, .menu li.onhover .drop
+{
+    left: -100px;/*Use this property to change offset of the dropdown*/
+    right: auto;
+}
+
+
+/* Elements within the drop down sub-menu
+--------------------------------------------*/
+
+.menu div.drop div div
+{
+    padding: 6px 20px;
+}
+
+.menu div.drop div a
+{
+    line-height: 24px;  
+    color: #00ADEF;
+    background:none;
+}
+.menu div.drop div a:hover
+{
+    text-decoration:underline;
+    cursor:pointer;
+    color:Red;
+}
+
+.menu div.left {float:left;}
+
+
+
+#more-menu-continued {
+    overflow: hidden;
+    width: 90% ;
+    margin-top:0%;
+    margin-left: 5%;
+    padding: 30px 15px;
+}
+ 
+#more-menu-continued h2 {
+    padding: 0px 0px 20px 0px;
+    font-size: 30px;
+    margin-top: 0;
+}
+ 
+#more-menu-continued #column1 {
+    float:left;
+    width:33%;
+    margin-right: 50px;
+}
+ 
+#more-menu-continued #column2 {
+    float:left;
+    width: 30%;
+}
+ 
+#more-menu-continued #column3 {
+    float: right;
+    width: 30%;
+}
+ 
+#more-menu-continued img {
+    background: #000000;
+    border-radius: 15px;
+    transition: all 0.8s;
+}
+
+#more-menu-continued img:hover{
+     transform: scale(1.4);
+}
+
+
+/*Page 2 Css Style*/
+
+.info{
+    overflow: hidden;
+    width: 100% ;
+    margin-top:5%;
+    margin-left: 5%;
+}
+
+
+
+.info .header{
+    margin-left: 10%;
+    font-family: "CorporateACondensedRegular","Times New Roman","Arial",serif;
+    font-weight: normal;
+    position: relative;
+    font-size: 32px;
+
+}
+ 
+.info  .para{
+    width:30%;
+    font-size:20px;
+    margin-left:8%;
+    float:left;
+}
+            
+.info .pic{
+    float:right;
+    margin-right: 15%;
+    width: 739.328px;
+    height: 412.063px;
+    border-radius:20px;
+    
+}
+
+
+.info1 {
+    overflow: hidden;
+    width: 100% ;
+    margin-top:5%;
+    margin-left:5%;
+}
+
+
+.info1 .header1{
+    margin-left: 5%;
+    padding-left: 10px;
+    font-family: "CorporateACondensedRegular","Times New Roman","Arial",serif;
+    font-weight: normal;
+    position: relative;
+    font-size: 32px;
+    float:left;
+}
+
+.info1 .para1{
+    width:30%;
+    font-size:20px;
+    margin-left:8%;
+    margin-right:5%;
+    float:left;
+}
+
+.info1 .pic1{
+    float:left;
+    margin:0% 0% 0% 5%;
+    width: 739.328px;
+    height: 512.063px;
+    border-radius:20px;
+}
+
+
+.center {
+    overflow: hidden;
+    width: 90% ;
+    margin-top:5%;
+    margin-left:5%;
+}
+
+
+.center .title{
+    margin-top:5%;
+    width:25%;
+    font-size:32px;
+    font-weight: normal;
+    font-family: "CorporateACondensedRegular","Times New Roman","Arial",serif;
+    margin-left:8%;
+    float:left;
+}
+
+.center .paragraph{
+    margin-top:5%;
+    width:20%;
+    font-size:20px;
+    margin-left:2%;
+    margin-right:5%;
+    float:left;
+}
+
+.center1 {
+    overflow: hidden;
+    width: 90% ;
+    margin-top:5%;
+    margin-left:5%;
+}
+
+
+.center1 .title1{
+    margin-top:5%;
+    width:25%;
+    font-size:32px;
+    font-weight: normal;
+    font-family: "CorporateACondensedRegular","Times New Roman","Arial",serif;
+    margin-left:8%;
+    float:left;
+}
+
+.center1 .paragraph1{
+    margin-top:5%;
+    width:20%;
+    font-size:20px;
+    margin-left:2%;
+    margin-right:5%;
+    float:left;
+}
+
+
